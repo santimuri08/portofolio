@@ -2,11 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-const STATIC_HEADLINE = "Full-stack developer building ";
-const TYPED_FRAGMENT = "real-world applications with AI.";
-const TYPING_SPEED_MS = 55;
-const TYPING_START_DELAY_MS = 700;
-
 const ACCENT = "#22C55E";
 
 type FloatingItem = {
@@ -20,25 +15,15 @@ type FloatingItem = {
   baseOpacity: number;
 };
 
-// All icons placed outside the text column.
-// The text column on desktop sits roughly between left: 6% and left: 62% (max-w-4xl).
-// So: left-side icons stay at left: 2-5%, right-side icons stay at right: 4-12%.
-// Top-only icons can cross the column if they're above the text starts (top < 18%).
-// Bottom-only icons can cross the column if they're below the text ends (top > 88%).
 const FLOATING_ITEMS: FloatingItem[] = [
-  // Left margin (before text block)
-  { kind: "cube", top: "14%", left: "3%", size: 68, duration: 14, delay: 0, baseOpacity: 0.55 },
-  { kind: "braces", top: "48%", left: "2%", size: 34, duration: 12, delay: 2, baseOpacity: 0.32 },
-  { kind: "globe", top: "82%", left: "4%", size: 52, duration: 16, delay: 1, baseOpacity: 0.45 },
-
-  // Right margin (beyond text block)
-  { kind: "branch", top: "20%", right: "5%", size: 56, duration: 15, delay: 1.4, baseOpacity: 0.5 },
-  { kind: "angle", top: "52%", right: "6%", size: 64, duration: 13, delay: 0.8, baseOpacity: 0.55 },
-  { kind: "terminal", top: "78%", right: "8%", size: 44, duration: 13, delay: 1.8, baseOpacity: 0.4 },
-  { kind: "fn", top: "36%", right: "10%", size: 26, duration: 14, delay: 1.2, baseOpacity: 0.3 },
-
-  // Top band (above text, safe to cross horizontally)
-  { kind: "braces", top: "6%", right: "32%", size: 30, duration: 15, delay: 0.3, baseOpacity: 0.28 },
+  { kind: "cube", top: "18%", left: "4%", size: 64, duration: 14, delay: 0, baseOpacity: 0.5 },
+  { kind: "braces", top: "52%", left: "3%", size: 32, duration: 12, delay: 2, baseOpacity: 0.3 },
+  { kind: "globe", top: "80%", left: "5%", size: 48, duration: 16, delay: 1, baseOpacity: 0.42 },
+  { kind: "branch", top: "22%", right: "5%", size: 52, duration: 15, delay: 1.4, baseOpacity: 0.48 },
+  { kind: "angle", top: "55%", right: "6%", size: 60, duration: 13, delay: 0.8, baseOpacity: 0.52 },
+  { kind: "terminal", top: "82%", right: "8%", size: 42, duration: 13, delay: 1.8, baseOpacity: 0.38 },
+  { kind: "fn", top: "38%", right: "10%", size: 24, duration: 14, delay: 1.2, baseOpacity: 0.28 },
+  { kind: "braces", top: "8%", right: "32%", size: 28, duration: 15, delay: 0.3, baseOpacity: 0.26 },
 ];
 
 function FloatingIcon({ item, colorShift }: { item: FloatingItem; colorShift: number }) {
@@ -60,7 +45,16 @@ function FloatingIcon({ item, colorShift }: { item: FloatingItem; colorShift: nu
     case "cube":
       return (
         <div className="absolute" style={style}>
-          <svg width={item.size} height={item.size} viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            width={item.size}
+            height={item.size}
+            viewBox="0 0 48 48"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <path d="M24 6 L42 15 L42 33 L24 42 L6 33 L6 15 Z" />
             <path d="M24 6 L24 24 L6 15" />
             <path d="M24 24 L42 15" />
@@ -71,7 +65,15 @@ function FloatingIcon({ item, colorShift }: { item: FloatingItem; colorShift: nu
     case "globe":
       return (
         <div className="absolute" style={style}>
-          <svg width={item.size} height={item.size} viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round">
+          <svg
+            width={item.size}
+            height={item.size}
+            viewBox="0 0 48 48"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          >
             <circle cx="24" cy="24" r="18" />
             <ellipse cx="24" cy="24" rx="8" ry="18" />
             <path d="M6 24 L42 24" />
@@ -81,7 +83,16 @@ function FloatingIcon({ item, colorShift }: { item: FloatingItem; colorShift: nu
     case "angle":
       return (
         <div className="absolute" style={style}>
-          <svg width={item.size} height={item.size} viewBox="0 0 64 48" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            width={item.size}
+            height={item.size}
+            viewBox="0 0 64 48"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <path d="M18 10 L6 24 L18 38" />
             <path d="M46 10 L58 24 L46 38" />
             <path d="M36 8 L28 40" />
@@ -91,7 +102,15 @@ function FloatingIcon({ item, colorShift }: { item: FloatingItem; colorShift: nu
     case "branch":
       return (
         <div className="absolute" style={style}>
-          <svg width={item.size} height={item.size} viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round">
+          <svg
+            width={item.size}
+            height={item.size}
+            viewBox="0 0 48 48"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          >
             <circle cx="12" cy="10" r="4" />
             <circle cx="12" cy="38" r="4" />
             <circle cx="36" cy="18" r="4" />
@@ -102,20 +121,35 @@ function FloatingIcon({ item, colorShift }: { item: FloatingItem; colorShift: nu
       );
     case "braces":
       return (
-        <span className="absolute font-mono font-light" style={{ ...style, fontSize: `${item.size}px`, lineHeight: 1 }}>
+        <span
+          className="absolute font-mono font-light"
+          style={{ ...style, fontSize: `${item.size}px`, lineHeight: 1 }}
+        >
           {"{ }"}
         </span>
       );
     case "fn":
       return (
-        <span className="absolute font-mono font-light" style={{ ...style, fontSize: `${item.size}px`, lineHeight: 1 }}>
+        <span
+          className="absolute font-mono font-light"
+          style={{ ...style, fontSize: `${item.size}px`, lineHeight: 1 }}
+        >
           {"() =>"}
         </span>
       );
     case "terminal":
       return (
         <div className="absolute" style={style}>
-          <svg width={item.size} height={item.size} viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            width={item.size}
+            height={item.size}
+            viewBox="0 0 48 48"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <rect x="6" y="10" width="36" height="28" rx="2" />
             <path d="M14 22 L20 27 L14 32" />
             <path d="M24 32 L32 32" />
@@ -126,25 +160,11 @@ function FloatingIcon({ item, colorShift }: { item: FloatingItem; colorShift: nu
 }
 
 export default function Hero() {
-  const [typed, setTyped] = useState("");
   const [mounted, setMounted] = useState(false);
   const [colorShift, setColorShift] = useState(0);
 
   useEffect(() => {
     setMounted(true);
-    let index = 0;
-    const startTimer = setTimeout(() => {
-      const interval = setInterval(() => {
-        index += 1;
-        setTyped(TYPED_FRAGMENT.slice(0, index));
-        if (index >= TYPED_FRAGMENT.length) {
-          clearInterval(interval);
-        }
-      }, TYPING_SPEED_MS);
-      return () => clearInterval(interval);
-    }, TYPING_START_DELAY_MS);
-
-    return () => clearTimeout(startTimer);
   }, []);
 
   useEffect(() => {
@@ -158,11 +178,8 @@ export default function Hero() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const isTypingDone = typed.length === TYPED_FRAGMENT.length;
-
   return (
-    <section className="relative overflow-hidden border-b border-border">
-      {/* Subtle grid background */}
+    <section className="relative h-screen w-full overflow-hidden border-b border-border">
       <div
         aria-hidden="true"
         className="absolute inset-0 opacity-40"
@@ -173,95 +190,131 @@ export default function Hero() {
         }}
       />
 
-      {/* Floating icons layer - behind text but always in margins */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, transparent 0%, transparent 40%, rgba(0,0,0,0.5) 100%)",
+        }}
+      />
+
+      <div
+        aria-hidden="true"
+        className="absolute left-1/2 top-1/2 h-[40vh] w-[60vw] -translate-x-1/2 -translate-y-1/2 opacity-50 blur-3xl"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgba(34,197,94,0.08), transparent 60%)",
+        }}
+      />
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+      >
         {FLOATING_ITEMS.map((item, i) => (
           <FloatingIcon key={i} item={item} colorShift={colorShift} />
         ))}
       </div>
 
-      {/* Content - z-10 to sit above icons at all times */}
-      <div className="relative z-10 mx-auto max-w-6xl px-6 pb-32 pt-16 md:px-8 md:pb-48 md:pt-20">
-        <div className="max-w-4xl">
-          {/* Name */}
+      <div className="relative z-10 flex h-full w-full items-center justify-center px-6 md:px-8">
+        <div className="flex w-full max-w-5xl flex-col items-center text-center">
+          {/* Role pill */}
           <div
-            className={`mb-6 font-mono text-lg uppercase tracking-[0.2em] text-muted transition-all duration-700 ease-out ${
-              mounted ? "translate-y-0 opacity-80" : "translate-y-3 opacity-0"
-            }`}
-          >
-            Santiago Murillo Londono
-          </div>
-
-          {/* Availability tag */}
-          <div
-            className={`mb-12 inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-3 py-1 font-mono text-xs text-muted backdrop-blur-sm transition-all duration-700 ease-out ${
-              mounted ? "translate-y-0 opacity-100 delay-100" : "translate-y-3 opacity-0"
+            className={`mb-7 inline-flex items-center gap-2.5 rounded-full border border-border bg-card/50 px-3.5 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.22em] text-muted backdrop-blur-md transition-all duration-700 ease-out md:mb-8 ${
+              mounted ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
             }`}
           >
             <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60" style={{ backgroundColor: ACCENT }} />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full" style={{ backgroundColor: ACCENT }} />
+              <span
+                className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60"
+                style={{ backgroundColor: ACCENT }}
+              />
+              <span
+                className="relative inline-flex h-1.5 w-1.5 rounded-full"
+                style={{ backgroundColor: ACCENT }}
+              />
             </span>
-            Available for new roles
+            AI AUTOMATION DEVELOPER
+          </div>
+
+          {/* Name */}
+          <div
+            className={`mb-8 font-mono text-sm uppercase tracking-[0.3em] text-muted md:mb-10 transition-all duration-700 ease-out ${
+              mounted
+                ? "translate-y-0 opacity-90 delay-75"
+                : "translate-y-3 opacity-0"
+            }`}
+          >
+            Santiago Murillo
           </div>
 
           {/* Headline */}
           <h1
-            className={`mb-12 text-5xl font-medium leading-[1.05] tracking-tight md:text-7xl lg:text-[5.5rem] transition-all duration-700 ease-out ${
-              mounted ? "translate-y-0 opacity-100 delay-200" : "translate-y-4 opacity-0"
+            className={`mb-10 text-balance text-[2.75rem] font-semibold leading-[1.02] tracking-[-0.02em] md:mb-12 md:text-7xl lg:text-[5.5rem] transition-all duration-700 ease-out ${
+              mounted
+                ? "translate-y-0 opacity-100 delay-150"
+                : "translate-y-4 opacity-0"
             }`}
           >
-            {STATIC_HEADLINE}
-            <span className="text-muted">
-              {typed}
-              <span
-                className={`inline-block w-[0.08em] bg-foreground align-middle ${isTypingDone ? "animate-pulse" : ""}`}
-                style={{
-                  height: "0.9em",
-                  marginLeft: "0.05em",
-                  transform: "translateY(-0.05em)",
-                }}
-              />
+            <span className="block">I build</span>
+            <span
+              className="block bg-clip-text text-transparent"
+              style={{
+                backgroundImage:
+                  "linear-gradient(120deg, #ffffff 0%, #d4f7dd 45%, #22C55E 100%)",
+              }}
+            >
+              AI systems
             </span>
+            <span className="block text-muted">for real workflows.</span>
           </h1>
 
-          {/* Supporting line */}
+          {/* Description */}
           <p
-            className={`mb-14 max-w-2xl text-base leading-relaxed text-muted md:text-lg transition-all duration-700 ease-out ${
-              mounted ? "translate-y-0 opacity-100 delay-300" : "translate-y-4 opacity-0"
+            className={`mb-12 max-w-xl text-balance text-[15px] leading-relaxed text-muted md:mb-14 md:text-lg transition-all duration-700 ease-out ${
+              mounted
+                ? "translate-y-0 opacity-100 delay-250"
+                : "translate-y-4 opacity-0"
             }`}
           >
-            Focused on building and shipping production-ready systems at the intersection of full-stack engineering and AI.
+            Designing conversational tools, workflow automation, and AI-powered
+            systems built for real users.
           </p>
 
           {/* CTAs */}
           <div
-            className={`flex flex-wrap gap-3 transition-all duration-700 ease-out ${
-              mounted ? "translate-y-0 opacity-100 delay-500" : "translate-y-4 opacity-0"
+            className={`flex w-full flex-col items-stretch justify-center gap-3 sm:w-auto sm:flex-row sm:items-center sm:gap-3.5 transition-all duration-700 ease-out ${
+              mounted
+                ? "translate-y-0 opacity-100 delay-300"
+                : "translate-y-4 opacity-0"
             }`}
           >
             <a
               href="#projects"
-              className="group inline-flex items-center gap-2 rounded-md bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-all hover:opacity-90 hover:translate-x-0.5"
+              className="group inline-flex items-center justify-center gap-2 rounded-lg bg-foreground px-6 py-3 text-sm font-medium text-background transition-all duration-300 hover:-translate-y-0.5 hover:opacity-95 hover:shadow-[0_0_30px_-8px_rgba(34,197,94,0.4)]"
             >
-              View work
-              <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
-                {"->"}
+              View projects
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-300 group-hover:translate-x-0.5"
+              >
+                {"\u2192"}
               </span>
             </a>
             <a
-              href="https://github.com/yourhandle"
+              href="https://github.com/santimuri08"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-all hover:border-foreground hover:bg-card"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card/30 px-6 py-3 text-sm font-medium text-foreground backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground/40 hover:bg-card"
             >
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/yourhandle"
+              href="https://www.linkedin.com/in/santiago-murillo-londono-65b947293/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-all hover:border-foreground hover:bg-card"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card/30 px-6 py-3 text-sm font-medium text-foreground backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground/40 hover:bg-card"
             >
               LinkedIn
             </a>

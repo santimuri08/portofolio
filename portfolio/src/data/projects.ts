@@ -32,11 +32,54 @@ export type Project = {
 
 export const projects: Project[] = [
   // ============================================================
-  // 01 - StudyAI (featured, fully written)
+  // 01 - JobAgent AI (placeholder case study — flesh out later)
+  // ============================================================
+  {
+    slug: "jobagent-ai",
+    index: "01",
+    category: "AI / PRODUCT",
+    title: "JobAgent AI",
+    subtitle: "AI Job-Search Productivity System",
+    shortDescription:
+      "AI-powered job-search assistant that combines conversational workflows, live job aggregation, resume analysis, and application tracking into a single productivity system.",
+    tags: ["Next.js 15", "FastAPI", "PostgreSQL", "Claude AI", "pgvector"],
+    image: "/images/jobagent.png",
+    year: "2025",
+    liveUrl: "https://example.com",
+    repoUrl: "https://github.com/yourhandle/jobagent-ai",
+    featured: true,
+
+    fullDescription: [
+      "JobAgent AI is a 21-tool AI agent that combines live job search, semantic resume matching, and application tracking into a single conversational workflow. The case study for this project is in progress.",
+    ],
+    keyFeatures: [
+      "21-tool AI agent with live job search and semantic resume matching",
+      "Conversational interface for refining searches and analyzing roles",
+      "Resume analysis against specific job descriptions",
+      "Application tracking across multiple boards and sources",
+    ],
+    howItWorks: {
+      input:
+        "The user describes the kind of role they're looking for.",
+      process:
+        "The agent routes the request across job aggregation tools, semantic matching, and resume analysis.",
+      output:
+        "Ranked job matches with reasoning, plus a tracked application pipeline.",
+    },
+    techStack: [
+      { label: "Frontend", items: ["Next.js 15", "TypeScript"] },
+      { label: "Backend", items: ["FastAPI", "PostgreSQL", "pgvector"] },
+      { label: "AI", items: ["Claude AI"] },
+    ],
+    note: "Full case study coming soon.",
+  },
+
+  // ============================================================
+  // 02 - StudyAI
   // ============================================================
   {
     slug: "studyai",
-    index: "01",
+    index: "02",
     category: "AI / PRODUCT",
     title: "StudyAI",
     subtitle: "AI Academic Productivity Platform",
@@ -47,7 +90,6 @@ export const projects: Project[] = [
     year: "2025",
     liveUrl: "https://example.com",
     repoUrl: "https://github.com/yourhandle/studyai",
-    featured: true,
 
     fullDescription: [
       "StudyAI is a productivity platform for students who juggle multiple courses, deadlines, and unclear syllabi. Users paste in a raw assignment or syllabus and the system returns a clear breakdown: the deliverables, suggested sub-tasks, time estimates, and a compact summary of what the assignment is actually asking for.",
@@ -78,11 +120,11 @@ export const projects: Project[] = [
   },
 
   // ============================================================
-  // 02 - FitCoach AI
+  // 03 - FitCoach AI
   // ============================================================
   {
     slug: "fitcoach-ai",
-    index: "02",
+    index: "03",
     category: "MOBILE AI",
     title: "FitCoach AI",
     subtitle: "AI Fitness and Nutrition App",
@@ -121,11 +163,11 @@ export const projects: Project[] = [
   },
 
   // ============================================================
-  // 03 - AbsoluteJS Platform
+  // 04 - AbsoluteJS Platform
   // ============================================================
   {
     slug: "absolutejs",
-    index: "03",
+    index: "04",
     category: "TEAM / PLATFORM",
     title: "AbsoluteJS Platform",
     subtitle: "Industry-Sponsored Development Platform",
@@ -164,11 +206,11 @@ export const projects: Project[] = [
   },
 
   // ============================================================
-  // 04 - Music AI Video Generator
+  // 05 - Music AI Video Generator
   // ============================================================
   {
     slug: "music-ai",
-    index: "04",
+    index: "05",
     category: "AI / CREATIVE",
     title: "Music AI Video Generator",
     subtitle: "AI Creative Generation Platform",
@@ -207,11 +249,11 @@ export const projects: Project[] = [
   },
 
   // ============================================================
-  // 05 - Job Club
+  // 06 - Job Club
   // ============================================================
   {
     slug: "job-club",
-    index: "05",
+    index: "06",
     category: "WEB / COMMUNITY",
     title: "Job Club",
     subtitle: "Career and Community Platform",
@@ -249,11 +291,11 @@ export const projects: Project[] = [
   },
 
   // ============================================================
-  // 06 - Watch Showcase
+  // 07 - Watch Showcase
   // ============================================================
   {
     slug: "watch-showcase",
-    index: "06",
+    index: "07",
     category: "FULL-STACK",
     title: "Watch Showcase",
     subtitle: "Full-Stack Web Application",

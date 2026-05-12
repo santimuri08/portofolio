@@ -10,10 +10,15 @@ export default function Navbar() {
           href="/"
           className="font-mono text-sm tracking-tight text-foreground"
         >
-          yourname<span className="text-muted">.dev</span>
+          santiago<span className="text-muted">.dev</span>
         </Link>
-
         <div className="flex items-center gap-6 text-sm">
+          <a
+            href="#about"
+            className="text-muted transition-colors hover:text-foreground"
+          >
+            About
+          </a>
           <a
             href="#projects"
             className="text-muted transition-colors hover:text-foreground"
@@ -21,10 +26,10 @@ export default function Navbar() {
             Work
           </a>
           <a
-            href="#about"
+            href="#skills&tools"
             className="text-muted transition-colors hover:text-foreground"
           >
-            About
+            Skills
           </a>
           <a
             href="#contact"

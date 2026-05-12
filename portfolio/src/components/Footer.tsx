@@ -14,7 +14,7 @@ export default function Footer() {
               href="mailto:you@example.com"
               className="inline-flex items-center gap-2 text-lg text-foreground underline underline-offset-8 hover:no-underline"
             >
-              you@example.com
+              Santimuri636@gmail.com
             </a>
           </div>
 
@@ -25,7 +25,7 @@ export default function Footer() {
             <ul className="space-y-3 text-base">
               <li>
                 <a
-                  href="https://github.com/yourhandle"
+                  href="https://github.com/santimuri08"
                   target="_blank"
                   rel="noreferrer"
                   className="text-foreground underline-offset-4 hover:underline"
@@ -35,22 +35,12 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://linkedin.com/in/yourhandle"
+                  href="https://www.linkedin.com/in/santiago-murillo-londono-65b947293/"
                   target="_blank"
                   rel="noreferrer"
                   className="text-foreground underline-offset-4 hover:underline"
                 >
                   LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/yourhandle"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-foreground underline-offset-4 hover:underline"
-                >
-                  X / Twitter
                 </a>
               </li>
             </ul>
@@ -59,10 +49,10 @@ export default function Footer() {
 
         <div className="mt-24 flex items-center justify-between border-t border-border pt-8">
           <p className="font-mono text-xs text-muted">
-            Copyright {new Date().getFullYear()} Your Name
+            Copyright {new Date().getFullYear()} Santiago Murillo
           </p>
           <p className="font-mono text-xs text-muted">
-            Built with Next.js and Tailwind
+            Built with Next.js and React
           </p>
         </div>
       </div>

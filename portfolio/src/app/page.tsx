@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
+import Intermission from "@/components/Intermission";
 import About from "@/components/About";
+import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Footer from "@/components/Footer";
 
@@ -10,8 +11,9 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
-      <Projects />
+      <Intermission />
       <About />
+      <Projects />
       <Skills />
       <Footer />
     </main>

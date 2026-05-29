@@ -13,31 +13,17 @@ const STACK: StackColumn[] = [
   {
     label: "Frontend",
     number: "01",
-    items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
   },
   {
-    label: "Backend + data",
+    label: "Backend",
     number: "02",
-    items: [
-      "Node.js",
-      "FastAPI",
-      "PostgreSQL",
-      "Prisma",
-      "REST APIs",
-      "pgvector",
-    ],
+    items: ["Node.js", "Express", "FastAPI", "PostgreSQL", "Prisma"],
   },
   {
-    label: "AI + infrastructure",
+    label: "AI",
     number: "03",
-    items: [
-      "OpenAI SDK",
-      "Anthropic Claude",
-      "Vector Embeddings",
-      "AI Function Calling",
-      "Docker",
-      "Vercel",
-    ],
+    items: ["OpenAI", "Claude", "RAG", "Function Calling", "Vector Databases"],
   },
 ];
 
@@ -125,6 +111,7 @@ export default function Skills() {
   return (
     <section
       ref={ref}
+      id="skills"
       className="relative overflow-hidden border-b border-border"
     >
       {/* Grid texture */}

@@ -6,9 +6,9 @@ import { useRef } from "react";
 
 const CARDS = [
   {
-    label: "AI products",
-    title: "Workflows over demos",
-    text: "I focus on building AI systems that solve repeatable user problems through automation, conversational UX, and structured workflows.",
+    label: "PRODUCT DEVELOPMENT",
+    title: "Products over demos",
+    text: "I focus on building software that solves real user problems through thoughtful design, automation, and scalable architecture.",
   },
   {
     label: "Full-stack systems",
@@ -17,8 +17,8 @@ const CARDS = [
   },
   {
     label: "Build + iterate",
-    title: "Real product evolution",
-    text: "Most of my projects improve through testing, iteration, debugging, and refining how users interact with AI inside real workflows.",
+    title: "Continuous improvement",
+    text: "My projects evolve through testing, user feedback, debugging, and performance optimization to create better user experiences.",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function About() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
             className="mb-8 text-balance text-4xl font-medium leading-[1.1] tracking-tight md:text-6xl lg:text-[4rem]"
           >
-            I build AI systems that{" "}
+            I build AI systems and software that{" "}
             <span className="text-muted">people can actually use.</span>
           </motion.h2>
 
@@ -71,9 +71,9 @@ export default function About() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="max-w-2xl text-balance text-base leading-relaxed text-muted md:text-lg"
           >
-            I care about AI products that do real work — conversational
-            interfaces, workflow automation, and systems that feel reliable
-            beyond the demo.
+            Frontend Developer at Nagy Ventures and Information Technology student at NJIT. 
+            I build modern web applications, AI-powered products, and workflow systems using React, 
+            Next.js, TypeScript, PostgreSQL, and modern cloud technologies.
           </motion.p>
         </div>
 

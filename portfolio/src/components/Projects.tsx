@@ -11,6 +11,7 @@ type ShowcaseProject = {
   category: string;
   title: string;
   description: string;
+  highlights: string[];
   tags: string[];
   image: string;
   liveUrl?: string;
@@ -25,6 +26,12 @@ const PROJECTS: ShowcaseProject[] = [
     title: "StudyAI",
     description:
       "Chat-first productivity platform that converts assignments into AI-assisted study workflows.",
+    highlights: [
+      "Next.js + PostgreSQL + Claude AI",
+      "Assignment parsing and task generation",
+      "AI-powered study planning",
+      "Authentication and persistent user data",
+    ],
     tags: ["Next.js", "PostgreSQL", "Prisma", "Claude AI"],
     image: "/images/studyai.png",
     liveUrl: "https://study-mrzhbe37s-snaitgoaos-projects.vercel.app",
@@ -37,10 +44,70 @@ const PROJECTS: ShowcaseProject[] = [
     title: "JobTrack",
     description:
       "AI job-search agent with live job aggregation, resume matching, and application tracking in one workflow.",
+    highlights: [
+      "Next.js + FastAPI + PostgreSQL + Claude AI",
+      "Live job aggregation across sources",
+      "Resume-to-role semantic matching",
+      "Application tracking in one pipeline",
+    ],
     tags: ["Next.js", "FastAPI", "PostgreSQL", "Claude AI"],
     image: "/images/jobtrack.png",
     liveUrl: "https://jobtracker-production-cb87.up.railway.app",
     repoUrl: "https://github.com/santimuri08/jobtracker",
+  },
+  {
+    slug: "absolutejs",
+    number: "03",
+    category: "Web platform · capstone",
+    title: "AbsoluteJS Platform",
+    description:
+      "Industry-sponsored web platform focused on performance, security, and end-to-end type safety, built with a collaborative Agile team.",
+    highlights: [
+      "React + TypeScript + Bun + PostgreSQL",
+      "Reusable, type-safe UI components",
+      "Multi-framework and database integrations",
+      "Agile workflow with code review",
+    ],
+    tags: ["TypeScript", "React", "Bun", "PostgreSQL"],
+    image: "/images/absolutejs.png",
+    liveUrl: "https://absolutejs.com",
+    repoUrl: "https://github.com/absolutejs/absolutejs-docs",
+  },
+  {
+    slug: "watch-showcase",
+    number: "04",
+    category: "Full-stack · web app",
+    title: "Watch Showcase",
+    description:
+      "Full-stack Django app for luxury watches with authentication, validated reviews, and admin-only analytics views.",
+    highlights: [
+      "Django + Python + PostgreSQL",
+      "Auth with ratings and validated reviews",
+      "Relational models with data validation",
+      "Admin-only analytics via Django ORM",
+    ],
+    tags: ["Django", "Python", "PostgreSQL"],
+    image: "/images/watches.png",
+    liveUrl: "https://watch-showcase-web-page.onrender.com",
+    repoUrl: "https://github.com/santimuri08/Watch-showcase-Web-Page",
+  },
+  {
+    slug: "job-club",
+    number: "05",
+    category: "Career · community",
+    title: "Job Club",
+    description:
+      "Interactive platform helping students explore career resources, join a community, discover events, and build real-world tech skills.",
+    highlights: [
+      "React + Vercel",
+      "Career resources and community",
+      "Workshops and networking sections",
+      "Dynamic, accessible navigation",
+    ],
+    tags: ["React", "Vercel", "JavaScript"],
+    image: "/images/job-club.png",
+    liveUrl: "https://job-club-theta.vercel.app",
+    repoUrl: "https://github.com/santimuri08/Job-Club-Webstie",
   },
 ];
 
@@ -147,6 +214,22 @@ function ProjectRow({
         <p className="text-balance text-[15px] leading-relaxed text-muted md:text-base">
           {project.description}
         </p>
+
+        {/* Highlights */}
+        <ul className="flex flex-col gap-2.5 pt-1">
+          {project.highlights.map((point) => (
+            <li
+              key={point}
+              className="flex items-start gap-3 text-[14px] leading-relaxed text-foreground/85"
+            >
+              <span
+                aria-hidden="true"
+                className="mt-[0.55em] inline-block h-1 w-1 flex-shrink-0 rounded-full bg-muted/60"
+              />
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
 
         {/* Tags */}
         <div className="flex flex-wrap gap-1.5 pt-1">

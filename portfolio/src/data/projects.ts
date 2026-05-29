@@ -170,25 +170,24 @@ export const projects: Project[] = [
     index: "04",
     category: "TEAM / PLATFORM",
     title: "AbsoluteJS Platform",
-    subtitle: "Industry-Sponsored Development Platform",
+    subtitle: "Industry-Sponsored Capstone",
     shortDescription:
-      "A performance-focused web development platform built with a collaborative team, focused on scalability and type safety.",
-    tags: ["React", "TypeScript", "PostgreSQL", "Agile"],
+      "An industry-sponsored web development platform focused on performance, security, and end-to-end type safety, built with a collaborative Agile team.",
+    tags: ["JavaScript", "TypeScript", "React", "Bun", "PostgreSQL"],
     image: "/images/absolutejs.png",
     year: "2024",
-    liveUrl: "https://example.com",
-    repoUrl: "https://github.com/yourhandle/absolutejs",
+    liveUrl: "https://absolutejs.com",
 
     fullDescription: [
-      "AbsoluteJS is a web development platform built in collaboration with an industry sponsor, focused on delivering a type-safe, scalable foundation for modern applications. The platform includes reusable UI components, database integration patterns, and documentation designed for developer adoption.",
-      "My contributions centered on the component library and integration workflows. I worked within an agile team, participating in reviews, writing documentation, and refining components so that downstream teams could ship faster without compromising on type safety or performance.",
+      "AbsoluteJS is an industry-sponsored web development platform focused on performance, security, and end-to-end type safety. I worked as part of a collaborative team to enhance user interface components, improve developer documentation, and support multiple framework and database integrations.",
+      "The work ran through Agile sprints with version-controlled workflows and iterative feature development. My contributions centered on refining UI components and documentation so that downstream developers could adopt the platform quickly without compromising on type safety or performance.",
     ],
     keyFeatures: [
       "Reusable, type-safe UI component library",
-      "Integration patterns for PostgreSQL and modern frameworks",
+      "Support for multiple framework and database integrations",
       "Developer-facing documentation and usage examples",
-      "Collaborative agile workflow with code review and iteration cycles",
-      "Performance-conscious defaults for scaling to real traffic",
+      "Collaborative Agile workflow with code review and iteration cycles",
+      "Performance- and security-conscious defaults for production use",
     ],
     howItWorks: {
       input:
@@ -199,9 +198,10 @@ export const projects: Project[] = [
         "A consistent, fast, type-safe foundation that reduces boilerplate and shortens the path from idea to working product.",
     },
     techStack: [
-      { label: "Frontend", items: ["React", "TypeScript"] },
-      { label: "Backend", items: ["PostgreSQL", "Node.js"] },
-      { label: "Workflow", items: ["Agile", "Code Review", "Documentation"] },
+      { label: "Frontend", items: ["React", "TypeScript", "HTML", "CSS"] },
+      { label: "Runtime", items: ["Bun"] },
+      { label: "Data", items: ["PostgreSQL"] },
+      { label: "Workflow", items: ["Git", "GitHub", "Agile"] },
     ],
   },
 
@@ -256,36 +256,35 @@ export const projects: Project[] = [
     index: "06",
     category: "WEB / COMMUNITY",
     title: "Job Club",
-    subtitle: "Career and Community Platform",
+    subtitle: "Career Resource & Community Platform",
     shortDescription:
-      "A web platform that helps students explore career paths, access resources, and connect with a learning community.",
-    tags: ["React", "Vercel", "Web"],
+      "An interactive platform that helps students explore career resources, join a community, discover events, and access tools to build real-world skills.",
+    tags: ["React", "Vercel", "JavaScript"],
     image: "/images/job-club.png",
     year: "2024",
-    liveUrl: "https://example.com",
-    repoUrl: "https://github.com/yourhandle/job-club",
+    liveUrl: "https://job-club-theta.vercel.app",
 
     fullDescription: [
-      "Job Club is a web platform that serves as a starting point for students navigating early career decisions. It collects career paths, resources, and community connections in one place, with a focus on clear navigation and accessible design.",
-      "The product prioritizes getting the user to the right next step quickly. Rather than overwhelming visitors with feeds or feeds-of-feeds, the layout is built around explicit paths: pick a direction, see the resources for that direction, and connect with others on the same track.",
+      "Job Club is an interactive web platform designed to support students in exploring career resources, joining a community, discovering events, and accessing tools to build real-world skills. It brings career paths, workshops, and networking into one place, with a welcoming interface meant to help users launch their AI and technology careers.",
+      "The product prioritizes getting the user to the right next step quickly. The layout is built around dynamic navigation and organized sections for workshops and networking, rather than overwhelming visitors with endless feeds. It's deployed on Vercel for fast global access and seamless updates.",
     ],
     keyFeatures: [
-      "Curated career paths with linked resources",
-      "Community directory for connecting with peers",
-      "Accessible, keyboard-friendly navigation",
-      "Mobile-responsive layout",
-      "Clean information architecture optimized for quick scanning",
+      "Curated career resources with organized, scannable sections",
+      "Community features for connecting with peers",
+      "Dedicated sections for workshops and networking events",
+      "Dynamic navigation and a welcoming, accessible interface",
+      "Mobile-responsive layout deployed on Vercel for fast global access",
     ],
     howItWorks: {
       input:
-        "The user selects a career direction or browses by topic.",
+        "The user selects a career direction or browses workshops, events, and networking sections.",
       process:
-        "The platform surfaces the resources and community members tagged to that direction, filtered by the user's context if available.",
+        "The platform surfaces the resources, events, and community connections tagged to that direction.",
       output:
-        "A focused list of next steps: articles, tools, people to talk to, and events relevant to that path.",
+        "A focused list of next steps: resources, tools, events, and people relevant to that path.",
     },
     techStack: [
-      { label: "Frontend", items: ["React", "Tailwind CSS"] },
+      { label: "Frontend", items: ["React", "HTML", "CSS", "JavaScript"] },
       { label: "Infra", items: ["Vercel"] },
     ],
   },
@@ -300,34 +299,34 @@ export const projects: Project[] = [
     title: "Watch Showcase",
     subtitle: "Full-Stack Web Application",
     shortDescription:
-      "A Django-based application for browsing and reviewing luxury watches, with user authentication and relational database design.",
+      "A full-stack Django application for showcasing luxury and collectible watches, with authentication, validated reviews, and admin-only analytics views.",
     tags: ["Django", "Python", "PostgreSQL"],
     image: "/images/watches.png",
     year: "2024",
-    repoUrl: "https://github.com/yourhandle/watch-showcase",
+    liveUrl: "https://watch-showcase-web-page.onrender.com",
 
     fullDescription: [
-      "Watch Showcase is a full-stack web application for cataloging, browsing, and reviewing luxury watches. It covers the full stack end to end: user authentication, a relational data model, form handling with validation, and a review system with user-generated content.",
-      "The project is deliberately scoped as a foundation: a place where the backend decisions are made carefully and the frontend is built to expose those decisions clearly. It demonstrates the full request-to-response lifecycle of a traditional web application.",
+      "Watch Showcase is a full-stack Django web application for showcasing luxury and collectible watches. It implements user authentication, a ratings and review system with validation to prevent duplicate reviews, and relational database models with constraints and data validation.",
+      "Beyond the core catalog, the project includes admin-only analytics views that aggregate and sort user feedback using the Django ORM. It demonstrates the full request-to-response lifecycle of a traditional server-rendered web application, with careful backend decisions exposed clearly to the user.",
     ],
     keyFeatures: [
       "User authentication with secure session handling",
-      "Catalog of watches with filtering and search",
-      "Review system with user-generated content and moderation hooks",
-      "Relational data model covering brands, models, reviews, and users",
+      "Ratings and review system with validation to prevent duplicate reviews",
+      "Relational data models with constraints and server-side data validation",
+      "Admin-only analytics views aggregating and sorting feedback via the Django ORM",
       "Server-side rendering with Django templates",
     ],
     howItWorks: {
       input:
-        "A user signs in, browses the catalog, and optionally submits a review on a specific watch.",
+        "A user signs in, browses the catalog, and optionally submits a rating or review on a specific watch.",
       process:
-        "Requests are routed through Django views, data is fetched or written to PostgreSQL, and form input is validated server-side before persisting.",
+        "Requests are routed through Django views, data is fetched or written to PostgreSQL, and form input is validated server-side before persisting. Admin views aggregate feedback using the Django ORM.",
       output:
-        "Rendered HTML pages showing watch details, existing reviews, and the user's own submissions.",
+        "Rendered HTML pages showing watch details, existing reviews, the user's own submissions, and admin-only analytics dashboards.",
     },
     techStack: [
       { label: "Backend", items: ["Django", "Python", "PostgreSQL"] },
-      { label: "Frontend", items: ["Django templates", "CSS"] },
+      { label: "Frontend", items: ["HTML", "CSS", "JavaScript"] },
     ],
   },
 ];

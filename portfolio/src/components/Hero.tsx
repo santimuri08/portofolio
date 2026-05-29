@@ -235,7 +235,7 @@ export default function Hero() {
                 style={{ backgroundColor: ACCENT }}
               />
             </span>
-            AI AUTOMATION DEVELOPER
+            Full Stack & AI Automation Developer
           </div>
 
           {/* Name */}
@@ -251,35 +251,35 @@ export default function Hero() {
 
           {/* Headline */}
           <h1
-            className={`mb-10 text-balance text-[2.75rem] font-semibold leading-[1.02] tracking-[-0.02em] md:mb-12 md:text-7xl lg:text-[5.5rem] transition-all duration-700 ease-out ${
+            className={`mb-10 text-balance text-[2.75rem] font-semibold leading-[1.05] tracking-[-0.02em] md:mb-12 md:text-6xl lg:text-[4.75rem] transition-all duration-700 ease-out ${
               mounted
                 ? "translate-y-0 opacity-100 delay-150"
                 : "translate-y-4 opacity-0"
             }`}
           >
-            <span className="block">I build</span>
+            I build software that solves{" "}
             <span
-              className="block bg-clip-text text-transparent"
+              className="bg-clip-text text-transparent"
               style={{
                 backgroundImage:
                   "linear-gradient(120deg, #ffffff 0%, #d4f7dd 45%, #22C55E 100%)",
               }}
             >
-              AI systems
+              real problems.
             </span>
-            <span className="block text-muted">for real workflows.</span>
           </h1>
 
           {/* Description */}
           <p
-            className={`mb-12 max-w-xl text-balance text-[15px] leading-relaxed text-muted md:mb-14 md:text-lg transition-all duration-700 ease-out ${
+            className={`mb-12 max-w-2xl text-balance text-[15px] leading-relaxed text-muted md:mb-14 md:text-lg transition-all duration-700 ease-out ${
               mounted
                 ? "translate-y-0 opacity-100 delay-250"
                 : "translate-y-4 opacity-0"
             }`}
           >
-            Designing conversational tools, workflow automation, and AI-powered
-            systems built for real users.
+            Building modern web applications, AI-powered products, and workflow
+            systems using React, Next.js, TypeScript, PostgreSQL, and modern
+            cloud technologies.
           </p>
 
           {/* CTAs */}
